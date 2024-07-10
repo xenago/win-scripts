@@ -46,7 +46,7 @@ Using software like Cyberlink or [Stereoscopic Player](https://www.3dtv.at/Index
       4. In the `Output (Screen)` dropdown, select `NVIDIA 3D Vision`
     * However, in some cases it appears necessary to use the [Nvidia Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector/releases) to set Stereo to Yes for the Daum potplayer profile (and add the potplayer mini64 exe from Program Files to that profile)
 
-6. Exit PotPlayer, enable 3D in 3D Fix Manager and when potplayer restarts it should support 3D output with MVC-encoded content in ISO and MKV form. It will also support playing SBS/OU format content output in frame-packed format via 3D Vision.
+6. Exit PotPlayer, enable 3D in 3D Fix Manager (the display should switch to 3D mode at this point), start PotPlayer back up and it should support 3D output with MVC-encoded content in ISO and MKV form. It will also support playing SBS/OU format content output in frame-packed format via 3D Vision.
 
 ## PotPlayer HDMI Audio Passthrough
 
