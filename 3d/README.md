@@ -31,7 +31,7 @@ Using software like Cyberlink or [Stereoscopic Player](https://www.3dtv.at/Index
 3. Install Nvidia driver using [3D Fix Manager](https://helixmod.blogspot.com/2017/05/3d-fix-manager.html)
 
     * Purge old driver with [DDU](https://www.guru3d.com/download/display-driver-uninstaller-download/) if needed
-    * 3D Fix Manager 1.87 is mirrored here as the download seems spotty (the whole thing is somewhat janky but it provides a convenient GUI and tray icon for toggling frame-packed 3D output)
+    * [3D Fix Manager 1.87 is mirrored here](https://github.com/xenago/win-scripts/raw/main/3d/fix_manager_1.87.7z) as the download seems spotty (the whole thing is somewhat janky but it provides a convenient GUI and tray icon for toggling frame-packed 3D output)
     * Set up 3D resolutions and configuration as desired for your setup
       * The only ones I have used are 1080p24 and 720p60 as those are the only ones relevant for my display, but supposedly [720p50 is supported by the 3D Blu-ray standard as well](https://www.videohelp.com/hd)
 
