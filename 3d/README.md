@@ -2,11 +2,11 @@
 
 Play games and 3D media, like MVC-encoded 3D Blu-ray movies, in full-res stereo on Windows with Nvidia GPUs.
 
-Note: it is apparently also possible to do so with Intel iGPUs [e.g. via NUCs running Kodi](https://forum.kodi.tv/showthread.php?tid=365120) but I have not tested that since 3D Vision works for my needs.
+Note: it is apparently also possible to do so with Intel iGPUs [e.g. via NUCs running Kodi](https://forum.kodi.tv/showthread.php?tid=365120) but I have not tested that so cannot confirm which chips have this support.
 
 ## General Info
 
-Official support has ended from both Nvidia and Microsoft:
+Official support for stereo 3D has ended from both Nvidia and Microsoft:
 
 * The last [official consumer driver release is version `425.31`](https://nvidia.custhelp.com/app/answers/detail/a_id/4781/~/support-plan-for-3dvision-products)
    * As noted, this also includes the 3DTV Play components necessary for frame-packed output to HDMI 1.4a devices like HDTVs and projectors, so it is possible to use either the Nvidia 3D Vision kit with shutter glasses, or dedicated 3D display devices
@@ -26,7 +26,7 @@ Using paid software like Cyberlink or [Stereoscopic Player](https://www.3dtv.at/
     * Set up 3D resolutions and configuration as desired for your setup
       * The only ones I have used are 1080p24 and 720p60 as those are the only ones relevant for my display, but supposedly [720p50 is supported by the 3D Blu-ray standard as well](https://www.videohelp.com/hd)
 
-2. Install [PotPlayer](https://www.videohelp.com/software/PotPlayer/old-versions), performing the full codec install (including Intel MVC, this works on AMD and Nvidia as well)
+2. Install [PotPlayer](https://www.videohelp.com/software/PotPlayer/old-versions), performing the full codec install (including the Intel MVC decoder - it works with AMD CPUs too).
 
 3. Configure PotPlayer to decode 3D MVC and output with Nvidia 3D Vision
 
@@ -35,16 +35,17 @@ Using paid software like Cyberlink or [Stereoscopic Player](https://www.3dtv.at/
       2. `Video` section > `3D Mode` tab > select `Enable H.264 MVC 3D Decoder`
       3. For `3D Video Mode`, select `Auto enable 3D Video Mode`
       4. In the `Output (Screen)` dropdown, select `NVIDIA 3D Vision`
-    * However, in some cases it appears necessary to use the [Nvidia Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
+      5. Exclusive fullscreen may be required, especially with shutter glasses, so in the `Fullscreen exclusive mode` dropdown select `Enable: Fastest`
+    * In some cases it appears necessary to use the [Nvidia Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector/releases)
       1. Select the `DaumPot Player` profile
       2. Click the `A+` button and navigate to `C:\Program Files\DAUM\PotPlayer\PotPlayerMini64.exe` to add it to the profile
       3. In section `7 - Stereo`, set `Stereo - Enable` to `0x00000001 WKS_STEREO_SUPPORT_ON`
 
-6. Exit PotPlayer, enable 3D in 3D Fix Manager (the display should switch to 3D mode at this point), start PotPlayer back up and it should support 3D output with MVC-encoded content in ISO and MKV form. It will also support playing SBS/OU format content output in frame-packed format via 3D Vision. Playback in exclusive full-screen mode may be required to activate 3D.
+4. Exit PotPlayer, enable 3D in 3D Fix Manager (the display should switch to 3D mode at this point), start PotPlayer back up and it should support 3D output with MVC-encoded content in ISO and MKV form. It will also support playing SBS/OU format content output in frame-packed format via 3D Vision.
 
 ### Nvidia 3D Vision 2 Glasses Configuration
 
-This section is for use with the glasses kit, on an unsupported monitor.
+It is possible to use the shutter glasses kit with display models not advertised with official 3D support. My test setup is as follows:
 
 * Glasses kit model: `Nvidia 3D Vision 2 Wireless Glasses Kit (942-11431-0007-001)`
 * Monitor: `Acer XB271HU bmiprz` (IPS version)
@@ -58,7 +59,7 @@ In addition to the previous setup, the USB emitter driver must be installed:
 4. Locate the emitter in the `USB Devices` section as `NVIDIA Stereoscopic 3D USB controller`
 5. Attempt to update the driver, and locate `NV3DVisionUSB.Driver` when it fails and asks for the driver files
 
-3D software like PotPlayer should now work in fullscreen exclusive mode after 3D has been enabled! Make sure to turn on the charged glasses using the button on the left side.
+3D software like PotPlayer should now work in fullscreen exclusive mode after 3D has been enabled! Make sure to turn on the charged glasses using the button on the left side if they do not turn on automatically using the accelerometer.
 
 ### Dedicated HTPC Configuration
 
@@ -66,7 +67,7 @@ This section is for use as a dedicated media-only HTPC.
 
 #### OS install
 
-   **Although not necessary for movie playback**, Windows 10 1809 can be used for full compatibility with 3D Vision.
+   **Although not necessary for movie playback**, Windows 10 1809 can be used for wider compatibility with 3D Vision games.
 
    * Windows 10 ISO: `en_windows_10_enterprise_ltsc_2019_x64_dvd_5795bb03.iso`
    * SHA1: `615A77ECD40E82D5D69DC9DA5C6A6E1265F88E28`
