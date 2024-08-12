@@ -25,6 +25,7 @@ Using paid software like Cyberlink or [Stereoscopic Player](https://www.3dtv.at/
     * [3D Fix Manager 1.87 is mirrored here](https://github.com/xenago/win-scripts/raw/main/3d/fix_manager_1.87.7z) as the download seems spotty (the whole thing is somewhat janky but it provides a convenient GUI for driver setup and a tray icon for toggling frame-packed 3D output)
     * Set up 3D resolutions and configuration as desired for your setup
       * The only ones I have used are 1080p24 and 720p60 as those are the only ones relevant for my display, but supposedly [720p50 is supported by the 3D Blu-ray standard as well](https://www.videohelp.com/hd)
+    * If `Generic CRT` is not available in the 3D Vision menu, use [Custom Resolution Utility](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU) to [change the display EDID](https://www.mtbs3d.com/phpbb/viewtopic.php?t=25526) to `GSMC0A0` or `OTM0076`
 
 2. Install [PotPlayer](https://www.videohelp.com/software/PotPlayer/old-versions), performing the full codec install (including the Intel MVC decoder - it works with AMD CPUs too).
 
@@ -51,7 +52,7 @@ It is possible to use the shutter glasses kit with display models not advertised
 * Monitor: `Acer XB271HU bmiprz` (IPS version)
   * The TN version is `Abmiprz` and may be better for 3D since it has a faster response time
 
-In addition to the previous setup, the USB emitter driver must be installed:
+In addition to the previous setup, the USB emitter driver must be installed if it is not done automatically:
 
 1. Extract `NV3DVisionUSB.Driver` from `425.31-desktop-win10-64bit-international-whql.exe`
 2. Plug in the 3D Vision 2 emitter
