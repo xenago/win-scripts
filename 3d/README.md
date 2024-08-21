@@ -51,6 +51,7 @@ It is possible to use the shutter glasses kit with display models not advertised
 * Glasses kit model: `Nvidia 3D Vision 2 Wireless Glasses Kit (942-11431-0007-001)`
 * Monitor: `Acer XB271HU bmiprz` (IPS version)
   * The TN version is `Abmiprz` and may be better for 3D since it has a faster response time
+* Also successfully tested on Asus IPS monitors with "ELMB" support
 
 In addition to the previous setup, the USB emitter driver must be installed if it is not done automatically:
 
