@@ -17,6 +17,8 @@ It is possible to [get Nvidia 3D Vision working with newer GPUs using the studio
 
 Using paid software like Cyberlink or [Stereoscopic Player](https://www.3dtv.at/Index_en.aspx) may also be helpful for 3D playback.
 
+There is a [third party S3D Emitter solution as well](https://en.gradient-sg.com/s3d/emitter.php), have not tested it yet.
+
 ## Nvidia 3D Vision PC Setup
 
 1. Install Nvidia driver using [3D Fix Manager](https://helixmod.blogspot.com/2017/05/3d-fix-manager.html)
