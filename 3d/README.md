@@ -1,23 +1,41 @@
 # Stereoscopic 3D
 
-Play games and 3D media, like MVC-encoded 3D Blu-ray movies, in full-res stereo on Windows with Nvidia GPUs.
+Play games and 3D media, like MVC-encoded 3D Blu-ray movies, in full-res stereo on Windows.
 
-Note: it is apparently also possible to do so with Intel iGPUs [e.g. via NUCs running Kodi](https://forum.kodi.tv/showthread.php?tid=365120) but I have not tested that so cannot confirm which chips have this support.
+## Vendor 3D Support
 
-## General Info
+### Windows 3D Support
 
-Official support for stereo 3D has ended from both Nvidia and Microsoft:
+* Stereoscopic 3D support was officially added in [Windows 8](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/stereoscopic-3d), and [Windows 7 is not officially supported](https://learn.microsoft.com/en-us/windows/win32/api/dxgi1_2/nn-dxgi1_2-idxgidisplaycontrol)
+* Windows 10 1809-based builds are the last officially supported by Microsoft for 3D output; newer drivers/OS releases are far more limited (particlarly for DirectX/games)
+
+### Nvidia 3D Support
+
+3D playback with Nvidia hardware is the primary focus of this document.
+
+Official support for stereo 3D has ended from Nvidia:
 
 * The last [official consumer driver release is version `425.31`](https://nvidia.custhelp.com/app/answers/detail/a_id/4781/~/support-plan-for-3dvision-products)
    * As noted, this also includes the 3DTV Play components necessary for frame-packed output to HDMI 1.4a devices like HDTVs and projectors, so it is possible to use either the Nvidia 3D Vision kit with shutter glasses, or dedicated 3D display devices
 * The Ampere generation (e.g. RTX 3080) and subsequent hardware releases are not supported by the final 3D Vision driver; as such, the RTX 2080ti is the most powerful consumer GPU with full 3D Vision compatibility
-* Windows 10 1809-based builds are the last officially supported by Microsoft and Nvidia for 3D output; newer drivers/OS releases are far more limited (particlarly for DirectX/games)
 
 It is possible to [get Nvidia 3D Vision working with newer GPUs using the studio driver](https://www.mtbs3d.com/phpbb/viewtopic.php?p=188137&sid=dfed06fd1d35acaa5a8479995016452f#p188137).
 
-Using paid software like Cyberlink or [Stereoscopic Player](https://www.3dtv.at/Index_en.aspx) may also be helpful for 3D playback.
+### Intel 3D Support
 
-There is a [third party S3D Emitter solution as well](https://en.gradient-sg.com/s3d/emitter.php), have not tested it yet.
+Some Intel iGPUs support stereo 3D output in Windows, but I do not know specifically which generations include this feature.
+
+3D output worked fine in my testing of a Haswell-era [i5-4300u with HD Graphics 4400](https://www.intel.com/content/www/us/en/products/sku/76308/intel-core-i54300u-processor-3m-cache-up-to-2-90-ghz/specifications.html) on Windows 8.1:
+
+![Denon AVR overlay showing HDMI frame-packed 3D output from Intel system](intel_i5_3d_output.png)
+
+The `Stereoscopic 3D (Windows 8 Native 3D)` output option in PotPlayer enabled proper HDMI frame-packed 3D display output and displayed stereoscopic content correctly on a 3DTV:
+
+![Control Panel shows Stereoscopic 3D settings are enabled and display is configured for 1080p 3D output](intel_i5_control_panel_display_3d.png)
+
+### Other
+
+There is a [third party S3D Emitter solution](https://en.gradient-sg.com/s3d/emitter.php), but I have not tested it yet.
 
 ## Nvidia 3D Vision PC Setup
 
@@ -33,6 +51,7 @@ There is a [third party S3D Emitter solution as well](https://en.gradient-sg.com
 
 3. Configure PotPlayer to decode 3D MVC and output with Nvidia 3D Vision
 
+    * Although I believe it is worth becoming comfortable with PotPlayer since it is free and powerful, paid software like [Stereoscopic Player](https://www.3dtv.at/Index_en.aspx) or Cyberlink can be helpful for 3D playback as well
     * Generally, it is enough to enable the Intel MVC decoder and automatic 3D detection and set output to Nvidia 3D Vision:
       1. Open PotPlayer settings (right click playing area > `Preferences`)
       2. `Video` section > `3D Mode` tab > select `Enable H.264 MVC 3D Decoder`
