@@ -27,7 +27,7 @@ Some Intel iGPUs support stereo 3D output in Windows, but I do not know specific
 
 3D output worked fine in my testing of a Haswell-era [i5-4300u with HD Graphics 4400](https://www.intel.com/content/www/us/en/products/sku/76308/intel-core-i54300u-processor-3m-cache-up-to-2-90-ghz/specifications.html) on Windows 8.1:
 
-![Denon AVR overlay showing HDMI frame-packed 3D output from Intel system](intel_i5_3d_output.png)
+![Denon AVR overlay showing HDMI frame-packed 3D output from Intel system](4300u_win81_3d.png)
 
 The `Stereoscopic 3D (Windows 8 Native 3D)` output option in PotPlayer enabled proper HDMI frame-packed 3D display output and displayed stereoscopic content correctly on a 3DTV:
 
