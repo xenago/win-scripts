@@ -7,35 +7,65 @@ Play games and 3D media, like MVC-encoded 3D Blu-ray movies, in full-res stereo 
 ### Windows 3D Support
 
 * Stereoscopic 3D support was officially added in [Windows 8](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/stereoscopic-3d), and [Windows 7 is not officially supported](https://learn.microsoft.com/en-us/windows/win32/api/dxgi1_2/nn-dxgi1_2-idxgidisplaycontrol)
-* Windows 10 1809-based builds are the last officially supported by Microsoft for 3D output; newer drivers/OS releases are far more limited (particlarly for DirectX/games)
+* Windows 10 1809-based builds are the last officially supported by Microsoft for 3D output
+  * Newer drivers/OS releases are far more limited for DirectX/games
+  * That said, newer builds still work fine for 3D video playback (last tested with Windows 10 22H2 build 19045.5371, released in mid-January 2025)
 
 ### Nvidia 3D Support
 
-3D playback with Nvidia hardware is the primary focus of this document.
+3D playback works well with Nvidia hardware, and is the primary focus of this document as it requires additional setup.
 
 Official support for stereo 3D has ended from Nvidia:
 
 * The last [official consumer driver release is version `425.31`](https://nvidia.custhelp.com/app/answers/detail/a_id/4781/~/support-plan-for-3dvision-products)
    * As noted, this also includes the 3DTV Play components necessary for frame-packed output to HDMI 1.4a devices like HDTVs and projectors, so it is possible to use either the Nvidia 3D Vision kit with shutter glasses, or dedicated 3D display devices
-* The Ampere generation (e.g. RTX 3080) and subsequent hardware releases are not supported by the final 3D Vision driver; as such, the RTX 2080ti is the most powerful consumer GPU with full 3D Vision compatibility
+* The Ampere generation (e.g. RTX 3080) and subsequent hardware releases are not supported by the final 3D Vision driver; as such, the RTX 2080ti is the most powerful consumer GPU with full official 3D Vision compatibility
 
 It is possible to [get Nvidia 3D Vision working with newer GPUs using the studio driver](https://www.mtbs3d.com/phpbb/viewtopic.php?p=188137&sid=dfed06fd1d35acaa5a8479995016452f#p188137).
 
 ### Intel 3D Support
 
-Some Intel iGPUs support stereo 3D output in Windows, but I do not know specifically which generations include this feature.
+Some Intel iGPUs support stereo 3D output in Windows out of the box. I can confirm it is present from at least the Haswell era until at least Coffee Lake, and works with Windows 8.1 and Windows 10. Based on the [tables present on Wikipedia](https://en.wikipedia.org/wiki/Intel_Graphics_Technology?useskin=vector), it seems likely that models as old as Ivy Bridge and as new as Rocket Lake support it, excluding anything with Iris Xe or Arc integrated GPUs. As of 2024-12-23, [Intel has officially discontinued support](https://www.intel.com/content/www/us/en/support/articles/000093215/graphics/processor-graphics.html) for Stereoscopic 3D output for Alder Lake / Arc architectures onwards. The best indication that an Intel system supports 3D is the presence of an HDMI 1.4 output (not HDMI 2.0 or newer).
 
-3D output worked fine in my testing of a Haswell-era [i5-4300u with HD Graphics 4400](https://www.intel.com/content/www/us/en/products/sku/76308/intel-core-i54300u-processor-3m-cache-up-to-2-90-ghz/specifications.html) on Windows 8.1:
+HDMI 3D output works using a Coffee Lake [i5-8500T with UHD Graphics 630](https://www.intel.com/content/www/us/en/products/sku/129941/intel-core-i58500t-processor-9m-cache-up-to-3-50-ghz/specifications.html) on Windows 10 22H2 (specifically, a Dell OptiPlex 3060 Micro mini PC):
 
-![Denon AVR overlay showing HDMI frame-packed 3D output from Intel system](4300u_win81_3d.png)
+![Denon AVR overlay showing HDMI frame-packed 3D output from i5-8500T system](8500t_win10_version.png)
 
-The `Stereoscopic 3D (Windows 8 Native 3D)` output option in PotPlayer enabled proper HDMI frame-packed 3D display output and displayed stereoscopic content correctly on a 3DTV:
+The `3D display mode` toggle was present in the Settings app without any additional configuration. With it enabled, proper HDMI frame-packed 3D was immediately active. 
 
-![Control Panel shows Stereoscopic 3D settings are enabled and display is configured for 1080p 3D output](4300u_win81_control_panel_display_3d.png)
+![Windows 10 Settings app shows 3D display mode is enabled and resolution is configured for 1080p 3D output from Intel i5 8500t system](8500t_win10_3d_display_mode.png)
+
+![Windows 10 Settings app shows display mode is 1080p @ 23.976hz from Intel i5 8500t system, and Denon overlay shows 3D is enabled](8500t_win10_refresh_rate.png)
+
+Although the Windows interface was a bit buggy with 3D mode enabled, media playback was good and entire films play without issue. Here is an example image showing 36 minutes of 3D playback in PotPlayer on Windows 10 using the i5-8500T with zero dropped frames:
+
+![PotPlayer info overlay showing no dropped frames during 3D playback on Windows 10 with i5-8500T](8500t_win10_potplayer.png)
+
+System performance is solid, with 20-25% total system CPU usage (including additional TrueHD audio decoding overhead) and some headroom on the GPU:
+
+![Task manager overlay showing low CPU usage during 3D playback on Windows 10 with i5-8500T](8500t_win10_usage_cpu.png)
+
+![Task manager overlay showing moderate GPU usage during 3D playback on Windows 10 with i5-8500T](8500t_win10_usage_gpu.png)
+
+3D output also worked in my testing of a Haswell-era [i5-4300U with HD Graphics 4400](https://www.intel.com/content/www/us/en/products/sku/76308/intel-core-i54300u-processor-3m-cache-up-to-2-90-ghz/specifications.html) on Windows 8.1:
+
+![Denon AVR overlay showing HDMI frame-packed 3D output from Intel i5 4300U system on Windows 8.1](4300u_win81_3d.png)
+
+The `Stereoscopic 3D (Windows 8 Native 3D)` output option in PotPlayer had to be activated first to enable proper HDMI frame-packed 3D display output in the Windows 8.1 Control Panel. With that option enabled, stereoscopic content was displayed on a 3DTV over HDMI:
+
+![Control Panel shows Stereoscopic 3D settings are enabled and display is configured for 1080p 3D output from Intel i5 4300U system on Windows 8.1](4300u_win81_control_panel_display_3d.png)
+
+However, performance was occasionally choppy and imperfect. I suspect a faster Haswell CPU would work fine since the issue was on the MVC/video playback side and not the output side.
+
+### AMD
+
+Supposedly, 3D output over HDMI can be made to work with some older generations of AMD APUs, possibly up to the 5600G. I have not been able to confirm this yet.
+
+I tested the Rembrandt-generation AMD Ryzen 5 6600H with the Radeon 660M iGPU (specifically, a Trigkey S6 mini PC), and that did not work for 3D output in my testing on either Windows 10 or Windows 11.
 
 ### Other
 
-There is a [third party S3D Emitter solution](https://en.gradient-sg.com/s3d/emitter.php), but I have not tested it yet.
+There is a [third party S3D Emitter solution](https://en.gradient-sg.com/s3d/emitter.php), but I have not had much luck with it in testing.
 
 ## Nvidia 3D Vision PC Setup
 
