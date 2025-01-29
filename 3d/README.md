@@ -31,7 +31,7 @@ Some Intel iGPUs support stereo 3D output in Windows, but I do not know specific
 
 The `Stereoscopic 3D (Windows 8 Native 3D)` output option in PotPlayer enabled proper HDMI frame-packed 3D display output and displayed stereoscopic content correctly on a 3DTV:
 
-![Control Panel shows Stereoscopic 3D settings are enabled and display is configured for 1080p 3D output](intel_i5_control_panel_display_3d.png)
+![Control Panel shows Stereoscopic 3D settings are enabled and display is configured for 1080p 3D output](4300u_win81_control_panel_display_3d.png)
 
 ### Other
 
