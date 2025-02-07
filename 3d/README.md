@@ -6,7 +6,7 @@ Play games and 3D media, like MVC-encoded 3D Blu-ray movies, in full-res stereo 
 
 ### Windows 3D Support
 
-* Stereoscopic 3D support was officially added in [Windows 8](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/stereoscopic-3d), and [Windows 7 is not officially supported](https://learn.microsoft.com/en-us/windows/win32/api/dxgi1_2/nn-dxgi1_2-idxgidisplaycontrol)
+* Stereoscopic 3D support was officially added in [Windows 8](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/stereoscopic-3d), but [Windows 7 is apparently supported with the Platform Update](https://learn.microsoft.com/en-us/windows/win32/api/dxgi1_2/nn-dxgi1_2-idxgidisplaycontrol)
 * Windows 10 1809-based builds are the last officially supported by Microsoft for 3D output
   * Newer drivers/OS releases are far more limited for DirectX/games
   * That said, newer builds still work fine for 3D video playback (last tested with Windows 10 22H2 build 19045.5371, released in mid-January 2025)
