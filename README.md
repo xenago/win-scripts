@@ -4,7 +4,9 @@ Useful commands and scripts for use on Windows.
 
 WIP project to collect and publish my notes/tools.
 
-See also [nix-scripts](https://github.com/xenago/nix-scripts).
+See also:
+* [app-scripts](https://github.com/xenago/app-scripts)
+* [nix-scripts](https://github.com/xenago/nix-scripts)
 
 ## Index
 
