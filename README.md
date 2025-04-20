@@ -11,6 +11,7 @@ See also:
 ## Index
 
 * [3D](3d)
+* [Group Policy](gpo)
 * [Internet Explorer](ie)
 
 ## License
