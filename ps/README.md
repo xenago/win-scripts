@@ -6,5 +6,4 @@ PowerShell commands and utilities.
 
 Every 180 seconds, this will print the date and then run a command:
 
-while (1) {date -format s; MYCOMMANDHERE; sleep 180}
-
+    while (1) {date -format s; MYCOMMANDHERE; sleep 180}
