@@ -11,8 +11,10 @@ See also:
 ## Index
 
 * [3D](3d)
+* [CMD/batch](cmd)
 * [Group Policy](gpo)
 * [Internet Explorer](ie)
+* [PowerShell](ps)
 * [Rivatuner Statistics Server](rtss)
 
 ## License
