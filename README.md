@@ -14,6 +14,7 @@ See also:
 * [CMD/batch](cmd)
 * [Group Policy](gpo)
 * [Internet Explorer](ie)
+* [Partition](partition)
 * [PowerShell](ps)
 * [Rivatuner Statistics Server](rtss)
 
