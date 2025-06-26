@@ -67,6 +67,16 @@ I tested the Rembrandt-generation AMD Ryzen 5 6600H with the Radeon 660M iGPU (s
 
 There is a [third party S3D Emitter solution](https://en.gradient-sg.com/s3d/emitter.php), but I have not had much luck with it in testing.
 
+## Downloading 3D Blu-ray media to PC
+
+3D media is usually obtained by buying 3D Blu-ray discs. These are encumbered by DRM that can be worked around with MakeMKV to produce playable digital versions.
+
+When MakeMKV is first installed, the 3D MVC video track is not selected by default. To fix this, update the default selection rules.
+
+In `View > Preferences`, select the `Advanced` tab and for the `Default selection rule` make sure to change `-sel:mvcvideo` to `+sel:mvcvideo`. 
+
+![Select MVC video by default with MakeMKV](makemkv_select_mvc_track_default.png)
+
 ## Nvidia 3D Vision PC Setup
 
 1. Install Nvidia driver using [3D Fix Manager](https://helixmod.blogspot.com/2017/05/3d-fix-manager.html)
