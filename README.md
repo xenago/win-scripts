@@ -12,6 +12,7 @@ See also:
 
 * [3D](3d)
 * [CMD/batch](cmd)
+* [File Explorer/Windows Explorer](explorer)
 * [Group Policy](gpo)
 * [Internet Explorer](ie)
 * [Partition](partition)
