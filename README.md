@@ -15,6 +15,7 @@ See also:
 * [File Explorer/Windows Explorer](explorer)
 * [Group Policy](gpo)
 * [Internet Explorer](ie)
+* [Optimization](optimization)
 * [Partition](partition)
 * [PowerShell](ps)
 * [Rivatuner Statistics Server](rtss)
