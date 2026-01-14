@@ -168,3 +168,11 @@ It is useful to bitstream audio losslessly over HDMI, particularly to preserve o
     3. If specific formats do not work, a different Muxer can be selected instead for that format
     4. In my case, DTS/DTS-HD only worked with the `Alternative Pass-through Muxer`
 6. Restart PotPlayer
+
+## Untested
+
+1. [Kodi Forum:	`[Win][v19+] Intel HTPCs/NUCs & Kodi-native 3D MVC Playback`](https://forum.kodi.tv/showthread.php?tid=365120)
+
+   The installer appears to be `KodiSetup-v20.0.2-05d7303c-mvc-upstream-x64.exe`
+
+2. [ThreeDeeJay's PotPlayer scripts](https://github.com/ThreeDeeJay/PotPlayer3D/releases/tag/1.2.0)
