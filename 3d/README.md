@@ -2,6 +2,8 @@
 
 Play games and 3D media, like MVC-encoded 3D Blu-ray movies, in full-res stereo on Windows.
 
+See also [media-scripts/bd3d](https://github.com/xenago/media-scripts/tree/main/bd3d) for more Blu-ray 3D notes.
+
 ## Vendor 3D Support
 
 ### Windows 3D Support
