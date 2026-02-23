@@ -21,6 +21,7 @@ See also:
 * [PowerShell](ps)
 * [Rivatuner Statistics Server](rtss)
 * [WinGet](winget)
+* [WinSCP](winscp)
 
 ## License
 
