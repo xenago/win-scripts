@@ -14,6 +14,7 @@ See also:
 * [3D](3d)
 * [CMD/batch](cmd)
 * [File Explorer/Windows Explorer](explorer)
+* [Filesystem](fs)
 * [Group Policy](gpo)
 * [Internet Explorer](ie)
 * [Optimization](optimization)
