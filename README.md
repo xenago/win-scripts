@@ -13,6 +13,7 @@ See also:
 
 * [3D](3d)
 * [CMD/batch](cmd)
+* [Desktop Window Manager](dwm)
 * [File Explorer/Windows Explorer](explorer)
 * [Filesystem](fs)
 * [Group Policy](gpo)
