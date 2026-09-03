@@ -22,6 +22,7 @@ See also:
 * [Partition](partition)
 * [PowerShell](ps)
 * [Rivatuner Statistics Server](rtss)
+* [Task Manager](taskmgr)
 * [WinGet](winget)
 * [WinSCP](winscp)
 
