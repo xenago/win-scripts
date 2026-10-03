@@ -21,6 +21,7 @@ See also:
 * [Optimization](optimization)
 * [Partition](partition)
 * [PowerShell](ps)
+* [Rebooting](reboot)
 * [Rivatuner Statistics Server](rtss)
 * [Task Manager](taskmgr)
 * [WinGet](winget)
