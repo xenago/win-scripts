@@ -14,7 +14,7 @@ This can be done in the registry on Home editions or Group Policy on all other e
 
 Set the 32-bit DWORD at  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled` to `1`.
 
-#### Group Policy
+#### [Group Policy](../gpo/README.md#enable-long-paths)
 
 Set  `Computer Configuration > Administrative Templates > System > Filesystem > Enable Win32 long paths` to `Enabled`.
 
